@@ -1,0 +1,23 @@
+[project]
+name = "ai-research-assistant"
+version = "0.1.0"
+description = "AI Research Assistant with Tavily search and Groq summarization"
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=0.2.0",
+    "tavily-python>=0.3.0",
+    "groq>=0.4.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
