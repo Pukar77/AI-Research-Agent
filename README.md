@@ -81,16 +81,6 @@ cd backend
 python main.py "artificial intelligence"
 ```
 
-### Option C: MCP Server Mode 🔌
-
-For integration with Kiro, Claude Desktop, etc.:
-
-```bash
-cd backend
-python main.py --server
-```
-
----
 
 ---
 
@@ -247,7 +237,7 @@ streamlit run frontend/app.py --server.port 8502
 
 ## 📄 License
 
-MIT License - feel free to use for any purpose.
+Feel free to use for any purpose.
 
 ---
 
