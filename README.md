@@ -247,7 +247,7 @@ streamlit run frontend/app.py --server.port 8502
 
 ## 📄 License
 
-MIT License - feel free to use for any purpose.
+Feel free to use for any purpose.
 
 ---
 
