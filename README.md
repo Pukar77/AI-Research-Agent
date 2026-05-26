@@ -56,12 +56,6 @@ CITATION_STYLE=APA
 
 ### Option A: Web Interface (Recommended) 🌐
 
-**Windows:**
-```bash
-run_frontend.bat
-```
-
-**Mac/Linux:**
 ```bash
 streamlit run frontend/app.py
 ```
@@ -76,12 +70,6 @@ Then open: http://localhost:8501
 
 ### Option B: Command Line Interface 💻
 
-**Windows:**
-```bash
-run_backend.bat
-```
-
-**Mac/Linux:**
 ```bash
 cd backend
 python main.py
@@ -104,36 +92,46 @@ python main.py --server
 
 ---
 
+---
+
 ## 🎯 How It Works
 
-1. **Search**: Queries Tavily API for relevant web sources
-2. **Summarize**: Uses Groq AI to generate summaries with key points
-3. **Generate**: Creates a formatted research document with citations
-4. **Save**: Automatically saves results to markdown files
+1. **Search** - Queries Tavily API for relevant web sources
+2. **Summarize** - Uses Groq AI to generate summaries with key points
+3. **Generate** - Creates a formatted research document with citations
+4. **Export** - Saves results to markdown files
+
+---
+
+---
 
 ## 📁 Project Structure
 
 ```
 ai-research-assistant/
-├── frontend/            ⭐ Streamlit web interface
-│   ├── app.py          # Main Streamlit app
-│   ├── run.bat         # Windows launcher
-│   ├── requirements.txt # Frontend dependencies
-│   └── README.md       # Frontend documentation
-├── backend/            ⭐ Backend services
+├── frontend/              # Streamlit web interface
+│   ├── app.py
+│   ├── requirements.txt
+│   └── README.md
+│
+├── backend/               # Backend services
 │   ├── src/
-│   │   ├── server/     # MCP tools definition
-│   │   ├── tools/      # Research tools
-│   │   ├── services/   # API integrations (Tavily, Groq)
-│   │   └── models/     # Data models & config
-│   ├── tests/          # Unit tests
-│   ├── main.py         # CLI & MCP server entry point
-│   ├── requirements.txt # Backend dependencies
-│   ├── pyproject.toml  # Project configuration
-│   └── README.md       # Backend documentation
-├── .env                # API keys (create this)
-└── README.md           # This file
+│   │   ├── server/       # MCP tools
+│   │   ├── tools/        # Research tools
+│   │   ├── services/     # API integrations
+│   │   └── models/       # Data models
+│   ├── tests/
+│   ├── main.py
+│   ├── requirements.txt
+│   └── README.md
+│
+├── .env                   # API keys
+└── README.md
 ```
+
+---
+
+---
 
 ## 🔧 Configuration
 
@@ -154,72 +152,87 @@ MAX_RESULTS=5
 CITATION_STYLE=APA
 ```
 
-### Available Groq Models
-
-- `llama-3.3-70b-versatile` (recommended, fastest)
+**Available Groq Models:**
+- `llama-3.3-70b-versatile` (recommended)
 - `llama-3.1-70b-versatile`
 - `mixtral-8x7b-32768`
 - `gemma2-9b-it`
 
+---
+
+---
+
 ## 🧪 Testing
 
 Run unit tests:
+
 ```bash
 cd backend
 pytest tests/
 ```
 
+---
+
 ## 📝 Output Format
 
 Research results are saved as markdown files with:
 
-- **Summary of Findings**: AI-generated summaries from each source
-- **Key Points**: Bullet-point highlights
-- **References**: Properly formatted citations (APA or MLA)
+- **Summary of Findings** - AI-generated summaries from each source
+- **Key Points** - Bullet-point highlights
+- **References** - Properly formatted citations (APA or MLA)
 
-Example output file: `research_artificial_intelligence.md`
+Example: `research_artificial_intelligence.md`
+
+---
+
+---
 
 ## 🐛 Troubleshooting
 
 ### API Key Errors
-```bash
-# Verify .env file exists
-cat .env
 
-# Should show:
-# TAVILY_API_KEY=tvly-...
-# GROQ_API_KEY=gsk_...
+Check your `.env` file exists and contains:
+```env
+TAVILY_API_KEY=tvly-...
+GROQ_API_KEY=gsk_...
 ```
 
 ### Module Not Found
+
+Reinstall dependencies:
 ```bash
-# Reinstall backend dependencies
 cd backend
 pip install -r requirements.txt
 
-# Reinstall frontend dependencies
 cd ../frontend
 pip install -r requirements.txt
 ```
 
 ### No Results Found
-- Check your internet connection
+
+- Check internet connection
 - Verify API keys are valid
 - Try a different search query
 
-### Streamlit Port Already in Use
+### Port Already in Use
+
 ```bash
 streamlit run frontend/app.py --server.port 8502
 ```
 
+---
+
+---
+
 ## 📖 Documentation
 
-- **README.md** - This file (project overview)
-- **QUICK_START.md** - Fast installation and setup guide
+- **README.md** - Project overview (this file)
+- **QUICK_START.md** - Fast installation guide
 - **frontend/README.md** - Streamlit frontend guide
 - **backend/README.md** - Backend API documentation
 - **USAGE.md** - Detailed usage guide
-- **SUMMARY.md** - Quick summary
+
+---
 
 ## 🎓 Use Cases
 
@@ -230,9 +243,13 @@ streamlit run frontend/app.py --server.port 8502
 - ✅ Quick fact-checking
 - ✅ Learning and education
 
+---
+
 ## 📄 License
 
 MIT License - feel free to use for any purpose.
+
+---
 
 ## 🙏 Acknowledgments
 
@@ -243,5 +260,9 @@ MIT License - feel free to use for any purpose.
 
 ---
 
+<div align="center">
+
 **Built with ❤️ for researchers, students, and curious minds**
+
+</div>
 #
